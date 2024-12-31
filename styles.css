@@ -1,0 +1,419 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --font-color: #333;
+    --bg-color: #f9f9f9;
+    --lgfont:1.9rem;
+    --mdfont:1.3rem;
+    --slfont:0.9rem;
+}
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+   }
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+header{
+    height:8vh;
+    width:100%;
+    position: fixed;
+    top: 0;
+    background-color:white;
+    z-index: 99;
+}
+
+nav h3{
+    font-size:var(--lgfont);
+    color:crimson;
+    font-weight:700;
+}
+
+header nav{
+    height:100%;
+    width:100%;
+    display: flex;
+    justify-content:space-between;
+    padding:0 0.5em;
+    align-items:center;
+}
+
+header nav ul{
+    list-style:none;
+    display: flex;
+    width:70%;
+    justify-content:space-between;
+    
+    
+}
+
+
+nav li{
+    border:2px solid black;
+    border-radius:4vh;
+    padding:0.5rem;
+    font-weight:700;
+    color:black;
+    position:relative;
+    transition:all ease 0.2s;
+    overflow:hidden;
+    
+}
+
+nav li::after{
+    content:"";
+    position:absolute;
+    height:100%;
+    width:100%;
+    background-color:skyblue;
+    left:0;
+    bottom:-100%;
+    border-radius:50px;
+    transition:all ease 0.3s;
+}
+nav li:hover::after{
+    bottom:0;
+    border-radius:0;
+}
+
+nav li a{
+    text-decoration:none;
+    color:black;
+    z-index: 9;
+    position:relative;
+    font-size: var(--mdfont);
+}
+
+nav li:hover a{
+   color:white;
+}
+
+
+#hero {
+    min-height: 60vh;
+    background-color: var(--primary-color);
+    color: white;
+    
+    transition: background-color 0.5s;
+    margin-top: 8vh;
+    width: 100%;
+    padding: 15px;
+    text-align: justify;
+}
+
+#hero h1{
+    font-size: var(--lgfont);
+    color:black;
+    text-align: center;
+}
+
+#hero p{
+    font-size:var(--mdfont);
+    margin-top:0.3rem ;
+    line-height: 1.7rem;
+   
+   
+}
+
+#hero:hover{
+    background-color: #2980b9;
+}
+
+
+#images{
+    padding: 30px;
+    background-color: var(--bg-color);
+    
+}
+#images h2{
+    font-size: var(--lgfont);
+}
+
+.images-con{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    justify-items:flex-start;
+    padding: 20px 20px;
+    background-color: #f1f1f1;
+    box-shadow: 0.5px 0.5px 5px black;
+    border-radius: 8px;
+
+}
+
+.image-card{
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    height:30vh;
+    width: 100%;
+    border-radius: 6px;
+    background-position: center;
+    background-size: cover;
+}
+
+.image-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+
+#contact {
+    padding: 50px;
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    border-radius: 3px;
+}
+#contact h3{
+    font-size: var(--lgfont)
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+label {
+    margin: 10px 0 5px;
+    font-size: var(--mdfont);
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: var(--mdfont);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+    font-size: var(--mdfont);
+    transition:0.1s;
+    box-shadow:1px 1px 3px black;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform:translateY(2px);
+    border:0.1px solid black;
+    box-shadow:none;
+
+}
+
+
+#infinite{
+    white-space:nowrap;
+    padding: 1rem 0 ;
+    overflow-x: hidden;
+    scrollbar-width:none;
+   
+}
+
+#infinite h3{
+    display: inline-block;
+    font-size: 1.9rem;
+    animation: run 7s linear infinite ;
+    margin-right: 0.5rem;
+
+}
+
+@keyframes run {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+    
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.card1{
+    background-image: url(images/img1.jpeg);}
+    
+
+
+.card2{
+    background-image: url(images/img2.jpeg);
+ 
+}
+.card3{
+    background-image: url(images/img3.jpeg);}
+ 
+
+.card4{
+    background-image: url(images/img4.jpeg);
+    background-position:top;
+   
+}
+
+.card5{
+    background-image: url(images/img5.jpeg);
+    
+}
+
+.card6{
+    background-image: url(images/img6.jpeg);
+  
+}
+.card7{
+    background-image: url(images/img7.jpeg);
+    
+}
+
+.card8{
+    background-image: url(images/img8.jpeg);
+   
+}
+
+.card9{
+    background-image: url(images/img9.jpeg);
+    background-position: top;
+  
+}
+.card10{
+    background-image: url(images/img10.jpeg);
+    
+}
+.card11{
+    background-image: url(images/img11.jpeg);}
+    
+.card12{
+    background-image: url(images/img12.jpeg);}
+  
+
+
+
+ @media only screen and (max-width: 400px) {
+
+    :root {
+        
+            --lgfont:1.5rem;
+            --mdfont:1rem;
+            --slfont:0.9rem;
+    }
+    
+       
+    nav li{
+            padding: 0.4rem;
+    }
+
+    header{
+            height: 10vh;
+            padding: 5px;
+    }
+    
+    #hero{
+            margin-top: 10vh;
+    }
+        
+    header nav ul{
+            width: 100%;
+        }
+       
+     header nav{
+            flex-direction: column;
+            justify-content:space-between;
+            padding:0 0.5em;
+            align-items:center;
+     }
+       
+     #images{
+            padding: 20px;
+    }
+        
+    
+    .image-card {
+            background-color: white;
+            width: 100%;
+            height:30vh;
+    }
+    
+        
+
+        
+    
+}
+    
+    
+    
+@media only screen and (min-width:400px) and (max-width:600px){
+    
+        :root {
+            
+            --lgfont:1.5rem;
+            --mdfont:1rem;
+            --slfont:0.9rem;
+        }
+    
+        .images-card {
+            width: 100%;
+            height:45vh;
+        }
+    
+    
+    }
+    
+    
+  
+    
+ @media only screen and (min-width: 768px) {
+        :root {
+           
+            --lgfont:1.5rem;
+            --mdfont:1rem;
+            --slfont:0.9rem;
+        }
+    
+    }
+    
+    
+    @media only screen and (min-width: 992px) {
+        :root {
+            
+            --lgfont:1.5rem;
+            --mdfont:1rem;
+            --slfont:0.9rem;
+        }
+    
+    }
+    
+    
+    @media only screen and (min-width:1200px){
+        :root {
+           
+            --lgfont:2.5rem;
+            --mdfont:1.3rem;
+            --slfont:0.9rem;
+        }
+
+
+    
+    }
+
+
